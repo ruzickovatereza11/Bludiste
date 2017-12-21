@@ -36,16 +36,16 @@ public class Labyrint extends JFrame{
 				repaint();
 				
 				//Player movement
-				if(key == KeyEvent.VK_W){
+				if(key == KeyEvent.VK_UP){
 					p.moveUp();
 				}
-				if(key == KeyEvent.VK_A){
+				if(key == KeyEvent.VK_LEFT){
 					p.moveLeft();
 				}
-				if(key == KeyEvent.VK_S){
+				if(key == KeyEvent.VK_DOWN){
 					p.moveDown();
 				}
-				if(key == KeyEvent.VK_D){
+				if(key == KeyEvent.VK_RIGHT){
 					p.moveRight();
 				}
 				

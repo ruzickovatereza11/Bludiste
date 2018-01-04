@@ -50,7 +50,7 @@ public class Labyrint extends JFrame{
 				}
 				
 				if(p.x == columns-1 && p.y == endLevelLoc){
-					JOptionPane.showMessageDialog(null, "Congratulations, you've beaten the level!", "End Game", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Gratuluji, úspìšnì si dokonèil tuto úroveò!", "Konec hry", JOptionPane.INFORMATION_MESSAGE);
 					dispose();
 					new HlavniMenu();
 				}
@@ -72,19 +72,19 @@ public class Labyrint extends JFrame{
         
         this.addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e) {
-                //System.out.println((columns*panelSize)+50+"-"+((rows*panelSize)+70));
+               
                 System.exit(0);
             }
         });
         
         this.setLocationRelativeTo(null);
         
-        //Create player
+        
     	p = new Hrac();
     	p.setVisible(true);
     	this.add(p);
     	
-        //Color map
+        
         for(int y = 0; y < columns; y++){
             for(int x = 0; x < rows; x++){
                 Dlazdice tile = new Dlazdice(x, y);
@@ -132,17 +132,18 @@ public class Labyrint extends JFrame{
             for(int y = 0; y < columns; y++){
                 for(int x = 0; x < rows; x++){
                     String mapChar = mapStr.substring(counter, counter+1);
-                    if(!mapChar.equals("\r\n") && !mapChar.equals("\n")&& !mapChar.equals("\r")){//If it's a number
-                        //System.out.print(mapChar);
+                    if(!mapChar.equals("\r\n") && !mapChar.equals("\n")&& !mapChar.equals("\r")){
+                       
                         map[x][y] = Integer.parseInt(mapChar);
-                    }else{//If it is a line break
+                    }else{
                         x--;
                         System.out.print(mapChar);
                     }
                     counter++;
                 }
             }
-        }catch(Exception e){
+        }
+        catch(Exception e){
             System.out.println("Unable to load existing map(if exists), creating new map.");
         }
     }

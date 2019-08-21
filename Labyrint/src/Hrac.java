@@ -7,7 +7,7 @@ public class Hrac extends JPanel{
 	int x, y;
 	
     public Hrac() {
-    	this.setBackground(Color.getHSBColor(0.3f, 0.3f, 1));
+    	this.setBackground(Color.GREEN);
     	this.setSize(Labyrint.panelSize, Labyrint.panelSize);
     }
 

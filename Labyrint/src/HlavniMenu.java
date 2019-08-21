@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -30,15 +31,18 @@ public class HlavniMenu {
     int WIDTH = 800;
     int HEIGHT = 530;
     
+    
             
 	public HlavniMenu() {
     	//Load map list
     	getMapList();
     	lvlList = new JComboBox<String>(mapList.toArray(new String[mapList.size()]));
+    	lvlList.setBackground(Color.YELLOW);
     	
         //Menu Variables
         Menu.setResizable(false);
         Menu.setSize(WIDTH, HEIGHT);
+        Menu.setBackground(Color.YELLOW);
         Menu.setLayout(null);
         Menu.setLocationRelativeTo(null);
         Menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,6 +50,7 @@ public class HlavniMenu {
         //Start Button Variables
         Start.setSize(menuWidth,menuHeight);
         Start.setLocation(10, menuY);
+        Start.setBackground(Color.YELLOW);
         Menu.add(Start);
         Start.addActionListener(new ActionListener(){
 
@@ -78,6 +83,7 @@ public class HlavniMenu {
         
         //Exit Button Variables
         Exit.setSize(menuWidth,menuHeight);
+        Exit.setBackground(Color.YELLOW);
         Exit.setLocation(680,menuY);
         Menu.add(Exit);
         Exit.addActionListener(new ActionListener(){
